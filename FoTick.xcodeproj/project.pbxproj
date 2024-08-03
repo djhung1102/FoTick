@@ -7,18 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */; };
+		EFB01D1B2C5CECB3007606D9 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */; };
+		EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */; };
+		EFB01D1F2C5D4F93007606D9 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */; };
 		EFE1D8962C560FC900656F47 /* FoTickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8952C560FC900656F47 /* FoTickApp.swift */; };
 		EFE1D8982C560FC900656F47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8972C560FC900656F47 /* ContentView.swift */; };
 		EFE1D89A2C560FCA00656F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE1D8992C560FCA00656F47 /* Assets.xcassets */; };
 		EFE1D89D2C560FCA00656F47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE1D89C2C560FCA00656F47 /* Preview Assets.xcassets */; };
+		EFE1D8A52C56104F00656F47 /* FoTickManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8A42C56104F00656F47 /* FoTickManager.swift */; };
+		EFE1D8A72C56108600656F47 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8A62C56108600656F47 /* Task.swift */; };
+		EFE1D8A92C56127E00656F47 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8A82C56127E00656F47 /* Category.swift */; };
+		EFE1D8AC2C56166400656F47 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8AB2C56166400656F47 /* TaskView.swift */; };
+		EFE1D8AE2C561D4E00656F47 /* SloganView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8AD2C561D4E00656F47 /* SloganView.swift */; };
+		EFE1D8B02C56229300656F47 /* TaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8AF2C56229300656F47 /* TaskCard.swift */; };
+		EFE1D8B22C562CBD00656F47 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8B12C562CBD00656F47 /* CreateTaskView.swift */; };
+		EFEB2E232C5764080018F430 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB2E222C5764080018F430 /* TestView.swift */; };
+		EFEB2E252C577C290018F430 /* UpdateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEB2E242C577C290018F430 /* UpdateTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
+		EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCategoryView.swift; sourceTree = "<group>"; };
+		EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		EFE1D8922C560FC900656F47 /* FoTick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoTick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE1D8952C560FC900656F47 /* FoTickApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoTickApp.swift; sourceTree = "<group>"; };
 		EFE1D8972C560FC900656F47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFE1D8992C560FCA00656F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFE1D89C2C560FCA00656F47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFE1D8A42C56104F00656F47 /* FoTickManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoTickManager.swift; sourceTree = "<group>"; };
+		EFE1D8A62C56108600656F47 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		EFE1D8A82C56127E00656F47 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EFE1D8AB2C56166400656F47 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		EFE1D8AD2C561D4E00656F47 /* SloganView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloganView.swift; sourceTree = "<group>"; };
+		EFE1D8AF2C56229300656F47 /* TaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCard.swift; sourceTree = "<group>"; };
+		EFE1D8B12C562CBD00656F47 /* CreateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
+		EFEB2E222C5764080018F430 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		EFEB2E242C577C290018F430 /* UpdateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +58,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFB01D192C5CEC9E007606D9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */,
+				EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */,
+				EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */,
+				EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		EFE1D8892C560FC900656F47 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				EFE1D8952C560FC900656F47 /* FoTickApp.swift */,
+				EFE1D8A42C56104F00656F47 /* FoTickManager.swift */,
 				EFE1D8972C560FC900656F47 /* ContentView.swift */,
+				EFB01D192C5CEC9E007606D9 /* Category */,
+				EFE1D8AA2C56142800656F47 /* TaskScreen */,
+				EFE1D8A32C56102F00656F47 /* Model */,
 				EFE1D8992C560FCA00656F47 /* Assets.xcassets */,
 				EFE1D89B2C560FCA00656F47 /* Preview Content */,
 			);
@@ -65,6 +106,28 @@
 				EFE1D89C2C560FCA00656F47 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFE1D8A32C56102F00656F47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D8A62C56108600656F47 /* Task.swift */,
+				EFE1D8A82C56127E00656F47 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFE1D8AA2C56142800656F47 /* TaskScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1D8AB2C56166400656F47 /* TaskView.swift */,
+				EFE1D8AF2C56229300656F47 /* TaskCard.swift */,
+				EFEB2E222C5764080018F430 /* TestView.swift */,
+				EFE1D8AD2C561D4E00656F47 /* SloganView.swift */,
+				EFE1D8B12C562CBD00656F47 /* CreateTaskView.swift */,
+				EFEB2E242C577C290018F430 /* UpdateTaskView.swift */,
+			);
+			path = TaskScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +200,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */,
+				EFE1D8A72C56108600656F47 /* Task.swift in Sources */,
+				EFE1D8A92C56127E00656F47 /* Category.swift in Sources */,
+				EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */,
+				EFB01D1F2C5D4F93007606D9 /* MenuCategory.swift in Sources */,
+				EFE1D8A52C56104F00656F47 /* FoTickManager.swift in Sources */,
+				EFE1D8AC2C56166400656F47 /* TaskView.swift in Sources */,
+				EFB01D1B2C5CECB3007606D9 /* CategoryView.swift in Sources */,
 				EFE1D8982C560FC900656F47 /* ContentView.swift in Sources */,
 				EFE1D8962C560FC900656F47 /* FoTickApp.swift in Sources */,
+				EFEB2E232C5764080018F430 /* TestView.swift in Sources */,
+				EFE1D8B22C562CBD00656F47 /* CreateTaskView.swift in Sources */,
+				EFEB2E252C577C290018F430 /* UpdateTaskView.swift in Sources */,
+				EFE1D8B02C56229300656F47 /* TaskCard.swift in Sources */,
+				EFE1D8AE2C561D4E00656F47 /* SloganView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +351,14 @@
 				DEVELOPMENT_TEAM = RKJ54P4495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FoTick;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +383,14 @@
 				DEVELOPMENT_TEAM = RKJ54P4495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FoTick;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
