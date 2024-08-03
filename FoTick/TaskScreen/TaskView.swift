@@ -19,14 +19,10 @@ struct TaskView: View {
         task.isDone == false
     }, animation: .easeInOut) var tasks: [Task]
     
-    @Query(filter: #Predicate<Task> { task in
-        task.isDone == true
-    }, animation: .easeInOut) var doneTasks: [Task] = []
-    
     var body: some View {
         NavigationStack {
             List {
-                if doneTasks.count > 0 {
+                if tasks.count > 0 {
                     Section("Tasks") {
                         ForEach(tasks, id: \.id) { item in
                             TaskCard(task: item)
@@ -48,34 +44,27 @@ struct TaskView: View {
                                 }
                         }
                     }
+                } else {
+                    HStack {
+                        Spacer()
+                        VStack(alignment: .center, spacing: 5) {
+                            Image(systemName: "tray")
+                                .font(.system(size: 40))
+                                .foregroundStyle(.gray)
+                            
+                            Text("No task found")
+                                .font(.title3)
+                                .foregroundStyle(.gray)
+                        }
+                        Spacer()
+                    }
+                    .padding(.vertical, 50)
                 }
                 
-                if doneTasks.count > 0 {
-                    Section("Done") {
-                        ForEach(doneTasks, id: \.id) { item in
-                            TaskCard(task: item)
-                                .padding(.vertical, 5)
-                                .swipeActions {
-                                    Button {
-                                        fotickManager.deleteTask(task: item)
-                                    } label: {
-                                        Label("Delete", systemImage: "trash")
-                                    }
-                                    .tint(.red)
-                                    
-                                    Button {
-                                        taskEdit = item
-                                    } label: {
-                                        Label("Edit", systemImage: "pencil")
-                                    }
-                                    .tint(.orange)
-                                }
-                        }
-                    }
-                }
+                DoneTaskView()
                 
             }
-            .listStyle(.plain)
+            .listStyle(.sidebar)
             .navigationTitle("To Do List")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -126,7 +115,6 @@ struct TaskView: View {
                 }
                 .presentationDetents([.large])
             }
-
         }
     }
 }

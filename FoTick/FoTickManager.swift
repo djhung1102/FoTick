@@ -17,6 +17,7 @@ import SwiftData
     }
     
     func saveTask(name: String, shortDescription: String, isDone: Bool, isImportant: Bool, isNotification: Bool, isSubTask: Bool, date: Date) {
+        print("Save Task")
         do {
             let task = Task(name: name, shortDescription: shortDescription, isDone: isDone, isImportant: isImportant, isNotification: isNotification, isSubTask: isSubTask, date: date)
             

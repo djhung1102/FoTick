@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF3F54E52C5E803F00A0C1DD /* DoneTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F54E42C5E803F00A0C1DD /* DoneTaskView.swift */; };
 		EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */; };
 		EFB01D1B2C5CECB3007606D9 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */; };
 		EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF3F54E42C5E803F00A0C1DD /* DoneTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTaskView.swift; sourceTree = "<group>"; };
 		EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
 		EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCategoryView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				EFE1D8AB2C56166400656F47 /* TaskView.swift */,
+				EF3F54E42C5E803F00A0C1DD /* DoneTaskView.swift */,
 				EFE1D8AF2C56229300656F47 /* TaskCard.swift */,
 				EFEB2E222C5764080018F430 /* TestView.swift */,
 				EFE1D8AD2C561D4E00656F47 /* SloganView.swift */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */,
+				EF3F54E52C5E803F00A0C1DD /* DoneTaskView.swift in Sources */,
 				EFE1D8A72C56108600656F47 /* Task.swift in Sources */,
 				EFE1D8A92C56127E00656F47 /* Category.swift in Sources */,
 				EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */,

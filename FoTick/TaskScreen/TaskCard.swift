@@ -30,13 +30,28 @@ struct TaskCard: View {
                         .foregroundStyle(task.isDone ? .gray : .black)
                         .strikethrough(task.isDone ? true : false, color: task.isDone ? .gray : .black)
                     
-//                    Text(task.date.formatted(date: .numeric, time: .omitted))
-//                        .font(.caption)
-//                        .foregroundStyle(.gray)
+                    HStack {
+                        if task.category?.name != nil {
+                            Text(task.category!.name)
+                                .font(.caption)
+                                .foregroundStyle(.gray)
+                            
+                            Text("•")
+                                .font(.caption)
+                                .foregroundStyle(.gray)
+                        } else {
+                            EmptyView()
+                        }
+                        
+                        Text(task.date.formatted(date: .numeric, time: .omitted))
+                            .font(.caption)
+                            .foregroundStyle(.gray)
+                    }
                 }
             }
             .onTapGesture {
                 task.isDone.toggle()
+                task.updatedAt = Date()
             }
             
             Spacer()

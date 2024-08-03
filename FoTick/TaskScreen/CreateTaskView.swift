@@ -11,6 +11,7 @@ import SwiftData
 struct CreateTaskView: View {
     
     @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) var modelContext
     @Environment(FoTickManager.self) var fotickManager
     
     @Query var categories: [Category]
@@ -51,12 +52,7 @@ struct CreateTaskView: View {
             }
             
             Button("Create") {
-                withAnimation {
-                    fotickManager.saveTask(name: task.name, shortDescription: task.shortDescription, isDone: task.isDone, isImportant: task.isImportant, isNotification: task.isNotification, isSubTask: task.isSubTask, date: task.date)
-                    
-                    task.category = selectedCategory
-                    selectedCategory?.tasks?.append(task)
-                }
+                save()
                 
                 dismiss()
             }
@@ -70,9 +66,16 @@ struct CreateTaskView: View {
                 } label: {
                     Image(systemName: "xmark")
                 }
-
             }
         }
+    }
+}
+
+extension CreateTaskView {
+    func save() {
+        modelContext.insert(task)
+        task.category = selectedCategory
+        selectedCategory?.tasks?.append(task)
     }
 }
 
