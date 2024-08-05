@@ -16,6 +16,8 @@ import SwiftData
         self.modelContext = modelContext
     }
     
+    var doneTasks: [Task] = []
+    
     func saveTask(name: String, shortDescription: String, isDone: Bool, isImportant: Bool, isNotification: Bool, isSubTask: Bool, date: Date) {
         print("Save Task")
         do {
@@ -39,26 +41,21 @@ import SwiftData
         }
     }
     
-//    func updateTask(task: Task) {
-//        do {
-//            let fetchDescriptor = FetchDescriptor<Task>(
-//                predicate: #Predicate { $0.id == task.id }
-//            )
-//            let existingTask = try modelContext.fetch(fetchDescriptor)
-//            
-//            if let existingTask = existingTask.first {
-//                // Update existing Activity
-//                existingTask.name = task.name
-//                existingTask.shortDescription = task.shortDescription
-//                existingTask.isDone = task.isDone
-//                existingTask.isImportant = task.isImportant
-//                existingTask.isNotification = task.isNotification
-//                existingTask.isSubTask = task.isSubTask
-//            }
-//            
+    func fetchTasks(for date: Date) {
+        do {
+            let fetchDescriptor = FetchDescriptor<Task>(
+                predicate: #Predicate { $0.isDone == true }
+            )
+            
+            let existingTask = try modelContext.fetch(fetchDescriptor)
+            
+            DispatchQueue.main.async {
+                self.doneTasks = existingTask
+            }
+            
 //            try modelContext.save()
-//        } catch {
-//            print("Error Update Task")
-//        }
-//    }
+        } catch {
+            print("Error Update Task")
+        }
+    }
 }

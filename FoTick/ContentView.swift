@@ -20,12 +20,19 @@ struct ContentView: View {
                 }
                 .tag(0)
             
+            CalendarView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Calendar")
+                }
+                .tag(1)
+            
             Text("Settings")
                 .tabItem {
                     Image(systemName: "gearshape.fill")
                     Text("Setting")
                 }
-                .tag(1)
+                .tag(2)
         }
     }
 }
