@@ -17,7 +17,6 @@ struct CalendarView: View {
             VStack {
                 DatePicker("Select Date", selection: $selectedDate, displayedComponents: [.date])
                     .datePickerStyle(GraphicalDatePickerStyle())
-                    .labelsHidden()
                     .onChange(of: selectedDate) { oldValue, newValue in
                         fotickManager.fetchTasks(for: selectedDate)
                     }
