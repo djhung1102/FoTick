@@ -12,9 +12,9 @@ struct DoneTaskView: View {
     
     @Environment(FoTickManager.self) var fotickManager
     
-    @Query(filter: #Predicate<Task> {
+    @Query(filter: #Predicate<TaskModel> {
         $0.isDone
-    }, animation: .easeInOut) var doneTasks: [Task] = []
+    }, animation: .easeInOut) var doneTasks: [TaskModel] = []
     
     var body: some View {
         if doneTasks.count > 0 {

@@ -16,7 +16,7 @@ struct CreateTaskView: View {
     
     @Query var categories: [Category]
     
-    @State var task = Task()
+    @State var task = TaskModel()
     @State var selectedCategory: Category?
     
     var body: some View {

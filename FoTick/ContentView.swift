@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(FoTickManager.self) var fotickManager
     
     @State var selection = 0
     
@@ -33,6 +34,11 @@ struct ContentView: View {
                     Text("Setting")
                 }
                 .tag(2)
+        }
+        .onAppear {
+            Task {
+                await fotickManager.requestNotification()
+            }
         }
     }
 }

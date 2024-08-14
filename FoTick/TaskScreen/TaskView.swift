@@ -13,11 +13,11 @@ struct TaskView: View {
     @Environment(FoTickManager.self) var fotickManager
     
     @State var isShowCreateTask: Bool = false
-    @State var taskEdit: Task?
+    @State var taskEdit: TaskModel?
     
-    @Query(filter: #Predicate<Task> { task in
+    @Query(filter: #Predicate<TaskModel> { task in
         task.isDone == false
-    }, animation: .easeInOut) var tasks: [Task]
+    }, animation: .easeInOut) var tasks: [TaskModel]
     
     var body: some View {
         NavigationStack {
@@ -114,6 +114,16 @@ struct TaskView: View {
                     UpdateTaskView(task: item)
                 }
                 .presentationDetents([.large])
+            }
+        }
+        .onAppear {
+            if fotickManager.notificationAllowed {
+                fotickManager.scheduleTaskCheckTimer()
+            }
+        }
+        .onChange(of: fotickManager.notificationAllowed) { oldValue, newValue in
+            if newValue == true {
+                fotickManager.scheduleTaskCheckTimer()
             }
         }
     }

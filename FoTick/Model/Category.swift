@@ -14,9 +14,9 @@ class Category {
     var name: String
     var icon: String
     var color: String
-    var tasks: [Task]?
+    var tasks: [TaskModel]?
     
-    init(id: UUID = UUID(), name: String = "", icon: String = "", color: String = "", tasks: [Task]? = nil) {
+    init(id: UUID = UUID(), name: String = "", icon: String = "", color: String = "", tasks: [TaskModel]? = nil) {
         self.id = id
         self.name = name
         self.icon = icon

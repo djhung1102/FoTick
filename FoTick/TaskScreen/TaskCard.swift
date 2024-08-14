@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskCard: View {
     
-    let task: Task
+    let task: TaskModel
     
     var body: some View {
         HStack {
@@ -64,5 +64,5 @@ struct TaskCard: View {
 }
 
 #Preview {
-    TaskCard(task: Task(id: UUID(), name: "Task 1", shortDescription: "Short description", isDone: false, isImportant: false, isNotification: false, isSubTask: false, date: Date(), subTasks: nil))
+    TaskCard(task: TaskModel(id: UUID(), name: "Task 1", shortDescription: "Short description", isDone: false, isImportant: false, isNotification: false, isSubTask: false, date: Date()))
 }

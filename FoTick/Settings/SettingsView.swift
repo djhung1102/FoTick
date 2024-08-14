@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(FoTickManager.self) var fotickManager
+    
     var body: some View {
         NavigationStack {
             List {
@@ -42,6 +44,29 @@ struct SettingsView: View {
                         }
                     }
                     .padding(.vertical, 10)
+                }
+                
+                Section("Notification") {
+                    VStack {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Image(systemName: "bell")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 20, height: 20)
+                                        .foregroundColor(.blue)
+                                    
+                                    Text("Notification")
+                                        .font(.title3)
+                                        .foregroundStyle(.black)
+                                }
+                            }
+                        }
+                    }
+                    .onTapGesture {
+                        fotickManager.openSettingsNotificationInIOS()
+                    }
                 }
                 
                 Section("App") {
@@ -98,9 +123,7 @@ struct SettingsView: View {
                             Spacer()
                         }
                     }
-                }
-                
-                Section {
+                    
                     VStack {
                         HStack {
                             Image(systemName: "lock")

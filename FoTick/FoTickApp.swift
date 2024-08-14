@@ -13,8 +13,7 @@ struct FoTickApp: App {
     
     var sharedModelContainer: ModelContainer = {
             let schema = Schema([
-                Task.self,
-                SubTask.self,
+                TaskModel.self,
                 Category.self
             ])
             let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)

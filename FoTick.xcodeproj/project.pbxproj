@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EF3F54E52C5E803F00A0C1DD /* DoneTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F54E42C5E803F00A0C1DD /* DoneTaskView.swift */; };
+		EF3F61342C6619B3009BF5E3 /* TodolistOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */; };
+		EF3F61362C661C14009BF5E3 /* PomodoroOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */; };
+		EF3F61382C6622AC009BF5E3 /* CalendarOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61372C6622AC009BF5E3 /* CalendarOn.swift */; };
 		EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */; };
 		EFB01D1B2C5CECB3007606D9 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */; };
 		EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		EF3F54E42C5E803F00A0C1DD /* DoneTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTaskView.swift; sourceTree = "<group>"; };
+		EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistOn.swift; sourceTree = "<group>"; };
+		EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroOn.swift; sourceTree = "<group>"; };
+		EF3F61372C6622AC009BF5E3 /* CalendarOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarOn.swift; sourceTree = "<group>"; };
 		EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
 		EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCategoryView.swift; sourceTree = "<group>"; };
@@ -64,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF3F61302C66195B009BF5E3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */,
+				EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */,
+				EF3F61372C6622AC009BF5E3 /* CalendarOn.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		EFB01D192C5CEC9E007606D9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +129,7 @@
 				EFE1D8952C560FC900656F47 /* FoTickApp.swift */,
 				EFE1D8A42C56104F00656F47 /* FoTickManager.swift */,
 				EFE1D8972C560FC900656F47 /* ContentView.swift */,
+				EF3F61302C66195B009BF5E3 /* Onboarding */,
 				EFB8C2EC2C609B3A00B00B65 /* Settings */,
 				EFC339C72C608B6300A5E553 /* Calendar */,
 				EFB01D192C5CEC9E007606D9 /* Category */,
@@ -235,6 +252,7 @@
 				EFB01D1F2C5D4F93007606D9 /* MenuCategory.swift in Sources */,
 				EFE1D8A52C56104F00656F47 /* FoTickManager.swift in Sources */,
 				EFE1D8AC2C56166400656F47 /* TaskView.swift in Sources */,
+				EF3F61342C6619B3009BF5E3 /* TodolistOn.swift in Sources */,
 				EFB01D1B2C5CECB3007606D9 /* CategoryView.swift in Sources */,
 				EFE1D8982C560FC900656F47 /* ContentView.swift in Sources */,
 				EFE1D8962C560FC900656F47 /* FoTickApp.swift in Sources */,
@@ -243,6 +261,8 @@
 				EFEB2E252C577C290018F430 /* UpdateTaskView.swift in Sources */,
 				EFE1D8B02C56229300656F47 /* TaskCard.swift in Sources */,
 				EFE1D8AE2C561D4E00656F47 /* SloganView.swift in Sources */,
+				EF3F61362C661C14009BF5E3 /* PomodoroOn.swift in Sources */,
+				EF3F61382C6622AC009BF5E3 /* CalendarOn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

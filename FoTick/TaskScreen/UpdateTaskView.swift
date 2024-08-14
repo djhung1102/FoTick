@@ -16,7 +16,7 @@ struct UpdateTaskView: View {
     @Query var categories: [Category]
     @State var selectedCategory: Category?
     
-    @Bindable var task: Task
+    @Bindable var task: TaskModel
     
     var body: some View {
         List {
@@ -63,5 +63,5 @@ struct UpdateTaskView: View {
 }
 
 #Preview {
-    UpdateTaskView(task: Task(id: UUID(), name: "Task 1", shortDescription: "Short description", isDone: false, isImportant: false, isNotification: false, isSubTask: false, date: Date(), subTasks: nil))
+    UpdateTaskView(task: TaskModel(id: UUID(), name: "Task 1", shortDescription: "Short description", isDone: false, isImportant: false, isNotification: false, isSubTask: false, date: Date()))
 }
