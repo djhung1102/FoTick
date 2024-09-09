@@ -13,38 +13,75 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section {
-                    VStack {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text("Statistics")
-                                        .font(.title2)
-                                        .bold()
-                                        .foregroundStyle(.black)
-                                    
-                                    Image(systemName: "chart.line.uptrend.xyaxis")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 20, height: 20)
-                                        .foregroundColor(.blue)
-                                }
-                                Text("View your statistics")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
-                            
-                            Spacer()
-                            
-                            Image(systemName: "chevron.forward")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 18, height: 18)
-                                .foregroundColor(.gray)
-                        }
+                HStack(alignment: .center) {
+                    VStack(alignment: .center) {
+                        Text("\(fotickManager.doneTasks.count)")
+                            .font(.title2)
+                            .bold()
+                            .foregroundStyle(.black)
+                        
+                        Text("Completed")
+                            .font(.subheadline)
+                            .foregroundStyle(.black)
                     }
-                    .padding(.vertical, 10)
+                    
+                    Spacer()
+                    
+                    Divider()
+                        .frame(height: 50) // Chiều cao của gạch
+                        .rotationEffect(.degrees(180))
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .center) {
+                        Text("\(fotickManager.notDoneTasks.count)")
+                            .font(.title2)
+                            .bold()
+                            .foregroundStyle(.black)
+                        
+                        Text("Incomplete")
+                            .font(.subheadline)
+                            .foregroundStyle(.black)
+                    }
                 }
+                .padding(.horizontal, 16)
+                .onAppear {
+                    fotickManager.fetchTasks(for: Date())
+                    fotickManager.fetchTasksNotDone(for: Date())
+                }
+                
+                //                Section {
+                //                    VStack {
+                //                        HStack {
+                //                            VStack(alignment: .leading) {
+                //                                HStack {
+                //                                    Text("Statistics")
+                //                                        .font(.title2)
+                //                                        .bold()
+                //                                        .foregroundStyle(.black)
+                //
+                //                                    Image(systemName: "chart.line.uptrend.xyaxis")
+                //                                        .resizable()
+                //                                        .scaledToFit()
+                //                                        .frame(width: 20, height: 20)
+                //                                        .foregroundColor(.blue)
+                //                                }
+                //                                Text("View your statistics")
+                //                                    .font(.caption)
+                //                                    .foregroundColor(.secondary)
+                //                            }
+                //
+                //                            Spacer()
+                //
+                //                            Image(systemName: "chevron.forward")
+                //                                .resizable()
+                //                                .scaledToFit()
+                //                                .frame(width: 18, height: 18)
+                //                                .foregroundColor(.gray)
+                //                        }
+                //                    }
+                //                    .padding(.vertical, 10)
+                //                }
                 
                 Section("Notification") {
                     VStack {

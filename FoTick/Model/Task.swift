@@ -36,3 +36,12 @@ class TaskModel {
         self.updatedAt = Date()
     }
 }
+
+extension TaskModel {
+    static var defaults: [TaskModel] {
+        [
+            .init(name: "Create task", shortDescription: "This is create task", isDone: false, isImportant: false, isNotification: false, isSubTask: false, date: Date()),
+            .init(name: "Create task 2", shortDescription: "This is create task 2", isDone: false, isImportant: false, isNotification: false, isSubTask: false, date: Date()),
+        ]
+    }
+}

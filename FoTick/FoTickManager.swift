@@ -23,6 +23,7 @@ import NotificationCenter
     }
     
     var doneTasks: [TaskModel] = []
+    var notDoneTasks: [TaskModel] = []
     
     func saveTask(name: String, shortDescription: String, isDone: Bool, isImportant: Bool, isNotification: Bool, isSubTask: Bool, date: Date) {
         do {
@@ -56,6 +57,23 @@ import NotificationCenter
             
             DispatchQueue.main.async {
                 self.doneTasks = existingTask
+            }
+            
+        } catch {
+            print("Error Update Task")
+        }
+    }
+    
+    func fetchTasksNotDone(for date: Date) {
+        do {
+            let fetchDescriptor = FetchDescriptor<TaskModel>(
+                predicate: #Predicate { $0.isDone == false }
+            )
+            
+            let existingTask = try modelContext.fetch(fetchDescriptor)
+            
+            DispatchQueue.main.async {
+                self.notDoneTasks = existingTask
             }
             
         } catch {
@@ -130,6 +148,27 @@ import NotificationCenter
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
                 print("Error scheduling notification: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func scheduleNotification(for task: TaskModel) {
+        // Tạo nội dung thông báo
+        let content = UNMutableNotificationContent()
+        content.title = "Task Reminder"
+        content.body = "Don't forget to complete the task: \(task.name)"
+        content.sound = .default
+
+        // Xác định thời gian thông báo (ví dụ sau 10 giây)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10800, repeats: false)
+
+        // Tạo yêu cầu thông báo
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+        // Thêm thông báo vào trung tâm thông báo
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error scheduling notification: \(error)")
             }
         }
     }

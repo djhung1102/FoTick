@@ -55,6 +55,8 @@ struct CreateTaskView: View {
                 save()
                 
                 dismiss()
+                
+                fotickManager.scheduleNotification(for: task)
             }
             .disabled(task.name.isEmpty)
         }
@@ -66,6 +68,19 @@ struct CreateTaskView: View {
                 } label: {
                     Image(systemName: "xmark")
                 }
+            }
+            
+            ToolbarItem(placement: .confirmationAction) {
+                Button {
+                    save()
+                    
+                    dismiss()
+                    
+                    fotickManager.scheduleNotification(for: task)
+                } label: {
+                    Image(systemName: "checkmark")
+                }
+                .disabled(task.name.isEmpty)
             }
         }
     }

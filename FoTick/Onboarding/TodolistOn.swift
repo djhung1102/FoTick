@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct TodolistOn: View {
+    @Binding var isFirstLaunch: Bool
+    
     var body: some View {
         NavigationStack {
+            Spacer()
             HStack {
                 Text("Welcome to")
                     .font(.title)
@@ -18,30 +21,53 @@ struct TodolistOn: View {
                     .padding(.top, 20)
                 
                 Text("FoTick")
-                    .font(.title)
+                    .font(.largeTitle)
                     .bold()
                     .foregroundStyle(.blue)
                     .padding(.top, 20)
             }
             
-//            Text("FoTick is a simple and powerful task manager that helps you to organize your tasks and get things done.")
-//                .font(.title3)
-//                .foregroundStyle(.gray)
-//                .padding(.top, 10)
-            Text("Task")
-                .font(.title)
-                .bold()
-                .foregroundStyle(.black)
+            Image("Anh2")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 250, height: 250)
                 .padding(.top, 20)
             
-            Text("Record your work, free your mind and manage everything gently to enhance productivity.")
+            Text("FoTick is a simple and powerful task manager that helps you to organize your tasks and get things done.")
                 .font(.title3)
                 .foregroundStyle(.gray)
                 .padding(.top, 10)
+                .frame(maxWidth: .infinity)
+                .multilineTextAlignment(.center)
+            
+            Spacer()
+            
+            Button {
+                withAnimation {
+                    UserDefaults.standard.set(true, forKey: "hasLaunched")
+                    isFirstLaunch = false
+                }
+            } label: {
+                HStack(alignment: .center, spacing: 10) {
+                    Text("Get Started")
+                        .font(.title3)
+                        .bold()
+                        
+                    Image(systemName: "arrow.right")
+                        .font(.title3)
+                        .foregroundStyle(.white)
+                }
+                .foregroundStyle(.white)
+                .padding(.horizontal, 85)
+                .padding(.vertical, 14)
+                .background(.blue)
+                .cornerRadius(10)
+            }
+
         }
     }
 }
 
 #Preview {
-    TodolistOn()
+    TodolistOn(isFirstLaunch: .constant(true))
 }

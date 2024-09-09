@@ -10,7 +10,6 @@
 		EF3F54E52C5E803F00A0C1DD /* DoneTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F54E42C5E803F00A0C1DD /* DoneTaskView.swift */; };
 		EF3F61342C6619B3009BF5E3 /* TodolistOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */; };
 		EF3F61362C661C14009BF5E3 /* PomodoroOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */; };
-		EF3F61382C6622AC009BF5E3 /* CalendarOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61372C6622AC009BF5E3 /* CalendarOn.swift */; };
 		EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */; };
 		EFB01D1B2C5CECB3007606D9 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */; };
 		EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */; };
@@ -37,7 +36,6 @@
 		EF3F54E42C5E803F00A0C1DD /* DoneTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTaskView.swift; sourceTree = "<group>"; };
 		EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistOn.swift; sourceTree = "<group>"; };
 		EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroOn.swift; sourceTree = "<group>"; };
-		EF3F61372C6622AC009BF5E3 /* CalendarOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarOn.swift; sourceTree = "<group>"; };
 		EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
 		EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCategoryView.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			children = (
 				EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */,
 				EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */,
-				EF3F61372C6622AC009BF5E3 /* CalendarOn.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 				EFCC0A812C8F20B500885E66 /* ItemsContaner.swift in Sources */,
 				EFE1D8AE2C561D4E00656F47 /* SloganView.swift in Sources */,
 				EF3F61362C661C14009BF5E3 /* PomodoroOn.swift in Sources */,
-				EF3F61382C6622AC009BF5E3 /* CalendarOn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

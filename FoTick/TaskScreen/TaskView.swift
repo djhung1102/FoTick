@@ -50,11 +50,11 @@ struct TaskView: View {
                         VStack(alignment: .center, spacing: 5) {
                             Image(systemName: "tray")
                                 .font(.system(size: 40))
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.brown)
                             
                             Text("No task found")
                                 .font(.title3)
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.brown)
                         }
                         Spacer()
                     }
@@ -68,14 +68,14 @@ struct TaskView: View {
             .navigationTitle("To Do List")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Text("PRO")
-                        .bold()
-                        .font(.footnote)
-                        .foregroundStyle(.white)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 8)
-                        .background(.tint)
-                        .clipShape(.rect(cornerRadius: 16))
+//                    Text("PRO")
+//                        .bold()
+//                        .font(.footnote)
+//                        .foregroundStyle(.white)
+//                        .padding(.vertical, 6)
+//                        .padding(.horizontal, 8)
+//                        .background(.tint)
+//                        .clipShape(.rect(cornerRadius: 16))
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
