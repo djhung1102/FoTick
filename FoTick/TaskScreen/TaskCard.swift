@@ -16,11 +16,11 @@ struct TaskCard: View {
             HStack {
                 if task.isDone {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.blue)
+                        .foregroundColor(task.isImportant ? .red : .blue)
                         .font(.system(size: 24))
                 } else {
                     Image(systemName: "circle")
-                        .foregroundColor(.blue)
+                        .foregroundColor(task.isImportant ? .red : .blue)
                         .font(.system(size: 24))
                 }
                 
@@ -56,8 +56,11 @@ struct TaskCard: View {
             
             Spacer()
             
-            Image(systemName: task.isImportant ? "flag.fill" : "flag")
-                .foregroundStyle(task.isImportant ? .red : .blue)
+//            Image(systemName: task.isImportant ? "flag.fill" : "flag")
+//                .foregroundStyle(task.isImportant ? .red : .blue)
+//                .font(.system(size: 24))
+            Image(systemName: task.category?.icon ?? "flag")
+                .foregroundStyle((task.category != nil) ? Color(task.category!.color): .blue)
                 .font(.system(size: 24))
         }
     }
