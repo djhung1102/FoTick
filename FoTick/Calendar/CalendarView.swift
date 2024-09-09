@@ -13,25 +13,30 @@ struct CalendarView: View {
     @State var selectedDate: Date = Date()
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                DatePicker("Select Date", selection: $selectedDate, displayedComponents: [.date])
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                    .onChange(of: selectedDate) { oldValue, newValue in
-                        fotickManager.fetchTasks(for: selectedDate)
-                    }
-                
-                List {
-                    Section(header: Text("Done")) {
-                        ForEach(fotickManager.doneTasks) { task in
-                            if Calendar.current.isDate(task.updatedAt, inSameDayAs: selectedDate) {
-                                TaskCard(task: task)
-                                    .padding(.vertical, 3)
-                            }
+        
+            NavigationStack {
+                ScrollView {
+                VStack {
+                    DatePicker("Select Date", selection: $selectedDate, displayedComponents: [.date])
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                        .onChange(of: selectedDate) { oldValue, newValue in
+                            fotickManager.fetchTasks(for: selectedDate)
                         }
-                    }
+                    
+                    Divider()
+//                    List {
+//                        Section(header: Text("Done")) {
+                            ForEach(fotickManager.doneTasks) { task in
+                                if Calendar.current.isDate(task.updatedAt, inSameDayAs: selectedDate) {
+                                    TaskCard(task: task)
+                                        .padding(.vertical, 3)
+                                }
+                            }
+//                        }
+//                    }
                 }
             }
+                .padding(.horizontal, 16)
             .onAppear {
                 fotickManager.fetchTasks(for: selectedDate)
             }

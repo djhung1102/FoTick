@@ -17,6 +17,7 @@
 		EFB01D1F2C5D4F93007606D9 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */; };
 		EFB8C2EE2C609B5B00B00B65 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB8C2ED2C609B5B00B00B65 /* SettingsView.swift */; };
 		EFC339C92C608B7900A5E553 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC339C82C608B7900A5E553 /* CalendarView.swift */; };
+		EFCC0A812C8F20B500885E66 /* ItemsContaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0A802C8F20B500885E66 /* ItemsContaner.swift */; };
 		EFE1D8962C560FC900656F47 /* FoTickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8952C560FC900656F47 /* FoTickApp.swift */; };
 		EFE1D8982C560FC900656F47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1D8972C560FC900656F47 /* ContentView.swift */; };
 		EFE1D89A2C560FCA00656F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE1D8992C560FCA00656F47 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		EFB8C2ED2C609B5B00B00B65 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EFC339C82C608B7900A5E553 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		EFCC0A802C8F20B500885E66 /* ItemsContaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsContaner.swift; sourceTree = "<group>"; };
 		EFE1D8922C560FC900656F47 /* FoTick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoTick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE1D8952C560FC900656F47 /* FoTickApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoTickApp.swift; sourceTree = "<group>"; };
 		EFE1D8972C560FC900656F47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				EFE1D8952C560FC900656F47 /* FoTickApp.swift */,
 				EFE1D8A42C56104F00656F47 /* FoTickManager.swift */,
+				EFCC0A802C8F20B500885E66 /* ItemsContaner.swift */,
 				EFE1D8972C560FC900656F47 /* ContentView.swift */,
 				EF3F61302C66195B009BF5E3 /* Onboarding */,
 				EFB8C2EC2C609B3A00B00B65 /* Settings */,
@@ -260,6 +263,7 @@
 				EFE1D8B22C562CBD00656F47 /* CreateTaskView.swift in Sources */,
 				EFEB2E252C577C290018F430 /* UpdateTaskView.swift in Sources */,
 				EFE1D8B02C56229300656F47 /* TaskCard.swift in Sources */,
+				EFCC0A812C8F20B500885E66 /* ItemsContaner.swift in Sources */,
 				EFE1D8AE2C561D4E00656F47 /* SloganView.swift in Sources */,
 				EF3F61362C661C14009BF5E3 /* PomodoroOn.swift in Sources */,
 				EF3F61382C6622AC009BF5E3 /* CalendarOn.swift in Sources */,
