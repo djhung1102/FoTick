@@ -227,26 +227,7 @@ import NotificationCenter
     public func removeAllNotification() {
         center.removeAllPendingNotificationRequests()
     }
+    
+    
 }
 
-//extension FoTickManager: UNUserNotificationCenterDelegate {
-//    // Xử lý khi thông báo được nhấn
-//    public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//        print("Thông báo được nhấn")
-//        
-//        let userInfo = response.notification.request.content.userInfo
-////        if let destination = userInfo["destination"] as? String {
-////            if destination == "FilmView" {
-////                print("Mở màn hình FilmView")
-////            }
-////        }
-//        
-//        completionHandler()
-//    }
-//    
-//    // Xử lý khi thông báo được hiển thị
-//    public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-//        print("Thông báo được hiển thị")
-//        completionHandler([.sound])
-//    }
-//}

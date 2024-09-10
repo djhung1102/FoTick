@@ -41,12 +41,19 @@ struct ContentView: View {
                         }
                         .tag(1)
                     
+                    PomodoroView()
+                        .tabItem {
+                            Image(systemName: "timer")
+                            Text("Calendar")
+                        }
+                        .tag(2)
+                    
                     SettingsView()
                         .tabItem {
                             Image(systemName: "gearshape.fill")
                             Text("Setting")
                         }
-                        .tag(2)
+                        .tag(3)
                 }
                 .transition(.move(edge: .leading))
                 .onAppear {

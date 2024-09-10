@@ -15,6 +15,8 @@
 		EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */; };
 		EFB01D1F2C5D4F93007606D9 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */; };
 		EFB8C2EE2C609B5B00B00B65 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB8C2ED2C609B5B00B00B65 /* SettingsView.swift */; };
+		EFC1568F2C902AB300E01DFB /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1568E2C902AB300E01DFB /* PomodoroView.swift */; };
+		EFC156932C9048F800E01DFB /* PomodoroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC156922C9048F800E01DFB /* PomodoroManager.swift */; };
 		EFC339C92C608B7900A5E553 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC339C82C608B7900A5E553 /* CalendarView.swift */; };
 		EFCC0A812C8F20B500885E66 /* ItemsContaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0A802C8F20B500885E66 /* ItemsContaner.swift */; };
 		EFCC0A862C8F6E0B00885E66 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0A852C8F6E0B00885E66 /* Launch Screen.storyboard */; };
@@ -58,6 +60,8 @@
 		EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCategoryView.swift; sourceTree = "<group>"; };
 		EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		EFB8C2ED2C609B5B00B00B65 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EFC1568E2C902AB300E01DFB /* PomodoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroView.swift; sourceTree = "<group>"; };
+		EFC156922C9048F800E01DFB /* PomodoroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroManager.swift; sourceTree = "<group>"; };
 		EFC339C82C608B7900A5E553 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		EFCC0A802C8F20B500885E66 /* ItemsContaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsContaner.swift; sourceTree = "<group>"; };
 		EFCC0A852C8F6E0B00885E66 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -125,6 +129,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		EFC1568D2C902A9E00E01DFB /* Pomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				EFC1568E2C902AB300E01DFB /* PomodoroView.swift */,
+			);
+			path = Pomodoro;
+			sourceTree = "<group>";
+		};
 		EFC339C72C608B6300A5E553 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +168,10 @@
 				EF9ECDDD2C8FFCF80065B72B /* FoTick.entitlements */,
 				EFE1D8952C560FC900656F47 /* FoTickApp.swift */,
 				EFE1D8A42C56104F00656F47 /* FoTickManager.swift */,
+				EFC156922C9048F800E01DFB /* PomodoroManager.swift */,
 				EFCC0A802C8F20B500885E66 /* ItemsContaner.swift */,
 				EFE1D8972C560FC900656F47 /* ContentView.swift */,
+				EFC1568D2C902A9E00E01DFB /* Pomodoro */,
 				EF3F61302C66195B009BF5E3 /* Onboarding */,
 				EFB8C2EC2C609B3A00B00B65 /* Settings */,
 				EFC339C72C608B6300A5E553 /* Calendar */,
@@ -274,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC156932C9048F800E01DFB /* PomodoroManager.swift in Sources */,
 				EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */,
 				EF3F54E52C5E803F00A0C1DD /* DoneTaskView.swift in Sources */,
 				EFE1D8A72C56108600656F47 /* Task.swift in Sources */,
@@ -291,6 +306,7 @@
 				EFEB2E232C5764080018F430 /* TestView.swift in Sources */,
 				EFE1D8B22C562CBD00656F47 /* CreateTaskView.swift in Sources */,
 				EFEB2E252C577C290018F430 /* UpdateTaskView.swift in Sources */,
+				EFC1568F2C902AB300E01DFB /* PomodoroView.swift in Sources */,
 				EFE1D8B02C56229300656F47 /* TaskCard.swift in Sources */,
 				EFCC0A812C8F20B500885E66 /* ItemsContaner.swift in Sources */,
 				EFE1D8AE2C561D4E00656F47 /* SloganView.swift in Sources */,
