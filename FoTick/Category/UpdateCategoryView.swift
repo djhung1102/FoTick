@@ -97,6 +97,7 @@ struct UpdateCategoryView: View {
             }
         }
         .onAppear {
+            name = category.name
             selectedIcon = category.icon
             selectedColor = category.color
         }

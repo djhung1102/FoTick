@@ -39,7 +39,6 @@ struct MenuCategory: View {
             .padding(.horizontal, 16)
             .onTapGesture {
                 categoryEdit = category
-                dismiss()
             }
             
             HStack {

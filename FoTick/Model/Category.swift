@@ -29,7 +29,7 @@ extension Category {
     static var defaults: [Category] {
         [
             .init(name: "Work", icon: "briefcase", color: "blue"),
-            .init(name: "Birthday", icon: "briefcase", color: "red"),
+            .init(name: "Birthday", icon: "gift", color: "red"),
             .init(name: "Movie", icon: "film", color: "purple"),
         ]
     }
