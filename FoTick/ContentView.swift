@@ -44,7 +44,7 @@ struct ContentView: View {
                     PomodoroView()
                         .tabItem {
                             Image(systemName: "timer")
-                            Text("Calendar")
+                            Text("Pomodoro")
                         }
                         .tag(2)
                     

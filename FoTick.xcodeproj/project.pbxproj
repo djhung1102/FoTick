@@ -11,6 +11,7 @@
 		EF3F61342C6619B3009BF5E3 /* TodolistOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */; };
 		EF3F61362C661C14009BF5E3 /* PomodoroOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */; };
 		EF48CD5D2C593E0600B93C86 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */; };
+		EF5A5F8F2C91F68C004DBC2F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5A5F8E2C91F68C004DBC2F /* StoreKit.framework */; };
 		EFB01D1B2C5CECB3007606D9 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1A2C5CECB3007606D9 /* CategoryView.swift */; };
 		EFB01D1D2C5D499C007606D9 /* UpdateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1C2C5D499C007606D9 /* UpdateCategoryView.swift */; };
 		EFB01D1F2C5D4F93007606D9 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB01D1E2C5D4F93007606D9 /* MenuCategory.swift */; };
@@ -53,6 +54,8 @@
 		EF3F61332C6619B3009BF5E3 /* TodolistOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistOn.swift; sourceTree = "<group>"; };
 		EF3F61352C661C14009BF5E3 /* PomodoroOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroOn.swift; sourceTree = "<group>"; };
 		EF48CD5C2C593E0600B93C86 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
+		EF5A5F8E2C91F68C004DBC2F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EF5ECC922C9218A400496BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EF9ECDC32C8FFB460065B72B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		EF9ECDC52C8FFB460065B72B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		EF9ECDDD2C8FFCF80065B72B /* FoTick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoTick.entitlements; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5A5F8F2C91F68C004DBC2F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 		EF9ECDC22C8FFB460065B72B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF5A5F8E2C91F68C004DBC2F /* StoreKit.framework */,
 				EF9ECDC32C8FFB460065B72B /* WidgetKit.framework */,
 				EF9ECDC52C8FFB460065B72B /* SwiftUI.framework */,
 			);
@@ -165,6 +170,7 @@
 		EFE1D8942C560FC900656F47 /* FoTick */ = {
 			isa = PBXGroup;
 			children = (
+				EF5ECC922C9218A400496BF7 /* Info.plist */,
 				EF9ECDDD2C8FFCF80065B72B /* FoTick.entitlements */,
 				EFE1D8952C560FC900656F47 /* FoTickApp.swift */,
 				EFE1D8A42C56104F00656F47 /* FoTickManager.swift */,
@@ -449,6 +455,7 @@
 				DEVELOPMENT_TEAM = RKJ54P4495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoTick/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoTick;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -484,6 +491,7 @@
 				DEVELOPMENT_TEAM = RKJ54P4495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoTick/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoTick;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
