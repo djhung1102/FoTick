@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import MessageUI
+import StoreKit
 
 struct SettingsView: View {
     @Environment(FoTickManager.self) var fotickManager
+    
+    @State private var isShowingMailView = false
+    @State private var showMailErrorAlert = false
     
     var body: some View {
         NavigationStack {
@@ -124,6 +129,9 @@ struct SettingsView: View {
                             Spacer()
                         }
                     }
+                    .onTapGesture {
+                        openWeb(url: "https://www.fotick.site")
+                    }
                     
                     VStack {
                         HStack(alignment: .center, spacing: 16) {
@@ -140,6 +148,13 @@ struct SettingsView: View {
                             }
                             
                             Spacer()
+                        }
+                    }
+                    .onTapGesture {
+                        if MFMailComposeViewController.canSendMail() {
+                            isShowingMailView = true
+                        } else {
+                            showMailErrorAlert = true
                         }
                     }
                     
@@ -160,6 +175,9 @@ struct SettingsView: View {
                             Spacer()
                         }
                     }
+                    .onTapGesture {
+                        requestReview()
+                    }
                     
                     VStack {
                         HStack {
@@ -178,6 +196,10 @@ struct SettingsView: View {
                             Spacer()
                         }
                     }
+                    .onTapGesture {
+                        openWeb(url: "https://fotick.site/privacy-policy")
+                    }
+                    
                     VStack {
                         HStack {
                             Image(systemName: "doc.text")
@@ -194,6 +216,9 @@ struct SettingsView: View {
                             
                             Spacer()
                         }
+                    }
+                    .onTapGesture {
+                        openWeb(url: "https://fotick.site/terms-of-use")
                     }
                 }
                 
@@ -223,9 +248,72 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
         }
+        .sheet(isPresented: $isShowingMailView) {
+            MailView(isShowing: $isShowingMailView, result: .constant(nil))
+        }
+        .alert(isPresented: $showMailErrorAlert) {
+            Alert(title: Text("Mail Services Not Available"),
+                  message: Text("Please configure a mail account in order to send email."),
+                  dismissButton: .default(Text("OK")))
+        }
+    }
+    
+    func openWeb(url: String) {
+        if let url = URL(string: url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    func requestReview() {
+        if let scene = UIApplication.shared.connectedScenes
+            .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: scene)
+        }
     }
 }
 
 #Preview {
     SettingsView()
+}
+
+struct MailView: UIViewControllerRepresentable {
+    @Binding var isShowing: Bool
+    @Binding var result: Result<MFMailComposeResult, Error>?
+
+    class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        @Binding var isShowing: Bool
+        @Binding var result: Result<MFMailComposeResult, Error>?
+
+        init(isShowing: Binding<Bool>, result: Binding<Result<MFMailComposeResult, Error>?>) {
+            _isShowing = isShowing
+            _result = result
+        }
+
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            defer {
+                isShowing = false
+            }
+            if let error = error {
+                self.result = .failure(error)
+            } else {
+                self.result = .success(result)
+            }
+        }
+    }
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(isShowing: $isShowing, result: $result)
+    }
+
+    func makeUIViewController(context: Context) -> MFMailComposeViewController {
+        let vc = MFMailComposeViewController()
+        vc.mailComposeDelegate = context.coordinator
+        vc.setToRecipients(["manhhunghd2000@gmail.com"])  // Thay thế bằng email nhà phát triển
+        vc.setSubject("Help/Feedback")
+        vc.setMessageBody("Please write your feedback or issues here...", isHTML: false)
+
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: Context) {}
 }
