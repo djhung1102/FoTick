@@ -179,47 +179,47 @@ struct SettingsView: View {
                         requestReview()
                     }
                     
-                    VStack {
-                        HStack {
-                            Image(systemName: "lock")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.blue)
-                            
-                            VStack(alignment: .leading) {
-                                Text("Privacy Policy")
-                                    .font(.title3)
-                                    .foregroundStyle(.black)
-                            }
-                            
-                            Spacer()
-                        }
-                    }
-                    .onTapGesture {
-                        openWeb(url: "https://fotick.site/privacy-policy")
-                    }
-                    
-                    VStack {
-                        HStack {
-                            Image(systemName: "doc.text")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.blue)
-                            
-                            VStack(alignment: .leading) {
-                                Text("Term of Service")
-                                    .font(.title3)
-                                    .foregroundStyle(.black)
-                            }
-                            
-                            Spacer()
-                        }
-                    }
-                    .onTapGesture {
-                        openWeb(url: "https://fotick.site/terms-of-use")
-                    }
+//                    VStack {
+//                        HStack {
+//                            Image(systemName: "lock")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 20, height: 20)
+//                                .foregroundColor(.blue)
+//                            
+//                            VStack(alignment: .leading) {
+//                                Text("Privacy Policy")
+//                                    .font(.title3)
+//                                    .foregroundStyle(.black)
+//                            }
+//                            
+//                            Spacer()
+//                        }
+//                    }
+//                    .onTapGesture {
+//                        openWeb(url: "https://fotick.site/privacy-policy")
+//                    }
+//                    
+//                    VStack {
+//                        HStack {
+//                            Image(systemName: "doc.text")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 20, height: 20)
+//                                .foregroundColor(.blue)
+//                            
+//                            VStack(alignment: .leading) {
+//                                Text("Term of Service")
+//                                    .font(.title3)
+//                                    .foregroundStyle(.black)
+//                            }
+//                            
+//                            Spacer()
+//                        }
+//                    }
+//                    .onTapGesture {
+//                        openWeb(url: "https://fotick.site/terms-of-use")
+//                    }
                 }
                 
                 Section {
